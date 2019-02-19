@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/weather.js"></script>
+    <style>
+      h3, h2, .weather-city-block{
+        text-align: center;
+      }
+      .container, .weather-city-block {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .weather-card {
+        width: 15%;
+        margin: 15px 10px;
+        box-shadow: 0 2px 8px #ccc;
+        height: 250px;
+        float: left;
+      }
+      .card-header {
+        background-color: #9fd4ff;
+        color: #062844;
+        font-size: 1.2em;
+        padding: 10px 0;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+      .hide {
+        display: none;
+      }
+      .table {
+        border: 2px solid #ddd;
+        width: 500px;
+        margin: 10px auto;
+      }
+      .row {
+        clear: both;
+        display: flex;
+        border-bottom: 2px solid #ddd;
+      }
+      .row:last-child {
+        border: 0;
+      }
+      .col-6:first-child {
+        border-right: 2px solid #ddd;
+      }
+      .col-6 {
+        width: 50%;
+        display: inline-block;
+        padding: 10px 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+
+    </div>
+    <section class="weather-city-block">
+      <form method="GET" id="cityWeather" action="">
+        <input value="" name="city" placeholder="city" id="cityInput" />
+        <button type="submit" id="citySearch">Search</button>
+      </form>
+      <div class="result">
+          <h2>
+              Weather in <span class="cityName"></span>, <i class="countryName"></i>
+            </h3>
+            <div class="detailWeather"></div>
+            <div class="table"></div>
+      </div>      
+    </section>
+
+
+    <div class="weatherblock">
+      <h3>
+        Hourly weather and forecasts in <i id="currCity"></i>,
+        <i id="currCountry"></i>
+      </h3>
+      <div class="container"></div>
+    </div>
+  </body>
+</html>
